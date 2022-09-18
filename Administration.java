@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 class Administration	{
-			
+	
+	public static User[] allGymWueUser = new User[1000];
+	
 	public static void main(String[] args)	{	
 			
 			// Lege Schueler einmal an
@@ -13,9 +17,6 @@ class Administration	{
 		    u2.printData();
 		    u3.printData();
 		    u4.printData();
-		    
-		    
-		
 	}
 	
 	
