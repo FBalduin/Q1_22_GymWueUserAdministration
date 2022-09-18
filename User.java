@@ -12,7 +12,9 @@ public class User  {
         this.firstName = "Max";
         this.lastName =  "Mustermann";
         this.dayOfBirth = new Date("01.01.00");
-        generateMoodleUsername(); // setze moodleUsername
+        this.gender = 'u';
+        this.mail = "-";
+        generateMoodleUsername(); // setze moodleUsername automatisiert - da er ja nur eigenen Regeln folgt.
     }
     
     // Konstruktor mit den drei wichtigsten Daten
@@ -21,6 +23,9 @@ public class User  {
         this.lastName = ln;
         this.dayOfBirth = dob;
         generateMoodleUsername(); // setze moodleUsername
+        this.mail = "-";
+        this.gender='u';
+
     }
     
     // Konstruktor mit allen Daten
@@ -28,6 +33,8 @@ public class User  {
         this.firstName = fn;
         this.lastName = ln;
         this.dayOfBirth = dob;
+        this.mail = mail;
+        this.gender = gender;
         generateMoodleUsername(); // setze moodleUsername
     }
     
@@ -36,6 +43,21 @@ public class User  {
     public void printData()	{
 		//todo - hier fehlt noch was
 		System.out.println(this.lastName+", "+this.firstName+","+this.moodleUsername+"!");
+		switch(this.gender){ 
+        case 'm': 
+            System.out.println("Gender: 'male' "); 
+            break; 
+        case 'f': 
+            System.out.println("Gender: 'female' "); 
+            break; 
+        case 'd': 
+            System.out.println("Gender: 'divers' "); 
+            break; 
+        case 'u': 
+            System.out.println("Gender: 'unknown' "); 
+            break;         } 
+		System.out.println("Day of Birth: "+this.dayOfBirth.getDateAsString());
+		System.out.println("Mail: "+this.mail);
     } 
     
     private void generateMoodleUsername()	{
