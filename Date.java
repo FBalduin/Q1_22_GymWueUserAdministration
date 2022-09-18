@@ -28,5 +28,29 @@ public class Date {
         } 
         return dd+mm; // verkette Tag mit Monat und gebe es zurück "0401"
     }
+    
+    public String getDateAsString()	{
+		String dd = ""; 
+        String mm = "";
+        String yy = "";
+        if(this.day<10) {		// Achtung - es soll ja "02" und nicht "2" gespeichert werden
+            dd="0"+this.day;
+        } else {
+            dd=this.day+"";
+        }
+        if(this.month<10) {
+            mm="0"+this.month;
+        } else {
+            mm=this.month+"";
+        } 
+        if(this.year<10)	{
+			yy = "0"+this.year;
+		}
+		else
+		{
+			yy = this.year+"";
+		}
+        return dd+"."+mm+"."+yy; // verkette Tag mit Monat und gebe es zurück "0401"
+	}
 
 }
